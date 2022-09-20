@@ -9,7 +9,9 @@ const Home = () => {
         <p className='mb-1'><strong> Do your job</strong></p>
         <a href="" className='button'>Explore Products</a>
       </div>
-      <img src={HomeImg} alt="" />
+      <img 
+        src={ HomeImg }
+        alt="" />
     </div>
   );
 }

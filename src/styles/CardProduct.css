@@ -17,6 +17,7 @@
 }
 .price-product{
     font-weight: bold;
+    line-height: 2;
 }
 .add-btn{
     padding: .3rem;
@@ -24,6 +25,10 @@
     background-color: #12151b;
     color: #fff;
     cursor: pointer;
-    margin-left: 70px;
     border: none;
+    display: flex;
+    align-items: center;
+}
+.svg-plus{
+    margin-left: 6px;
 }
