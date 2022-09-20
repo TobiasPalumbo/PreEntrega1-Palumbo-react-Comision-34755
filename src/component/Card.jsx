@@ -14,7 +14,7 @@ const Card = (props) => {
         </div>
     </div>
 );
-  console.log(stock[props.id].imagen)
+console.log(stock[props.id].imagen)
 }
 
 export default Card;
