@@ -1,0 +1,29 @@
+.card-container{
+    background-color: #F5F6F8;
+}
+.card{
+    background-color: #fff;
+    width: 300px;
+    padding: 1rem;
+    height: auto;
+}
+.img-product{
+    width: 100%;
+}
+.title-product{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.price-product{
+    font-weight: bold;
+}
+.add-btn{
+    padding: .3rem;
+    font-weight: 500;
+    background-color: #12151b;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 70px;
+    border: none;
+}

@@ -1,0 +1,15 @@
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: RGB(222, 220, 221);
+}
+.mb-1{
+    margin-bottom: 10px;
+}
+.button{
+    color: #F6F6F6;
+    padding: 0.3em;
+    background-color: #1F0D32;
+}
+
