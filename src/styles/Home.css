@@ -8,9 +8,44 @@
     margin-bottom: 10px;
 }
 .button{
+    top: 800px;
+    left: 49%;
+    cursor: pointer;
+    position: absolute;
     color: #F6F6F6;
-    padding: 0.3em;
-    background-color: #1F0D32;
-    box-shadow: 7px 7px  0px 3px #342346;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: .5rem 1rem;
+    width: 300px;
+    display: flex;
+    background-color: #090909;
+    box-shadow: 7px 7px  0px 3px #252424;
 }
-
+.container-head{
+    position: relative;
+}
+.w-100{
+    width: 100%;
+}
+.title{
+    width: 800px;
+    top: 400px;
+    left: 35%;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.arrow-svg{
+    fill: #fff;
+    width: 20px;
+    height: 0;
+    transform: rotate(90deg);
+    transition: all 400ms;
+}
+.button:hover .arrow-svg{
+    height: 20px;
+}

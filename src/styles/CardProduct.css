@@ -6,6 +6,8 @@
     width: 300px;
     padding: 1rem;
     height: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 6px #00000036;
 }
 .img-product{
     width: 100%;
@@ -20,7 +22,7 @@
     line-height: 2;
 }
 .add-btn{
-    padding: .3rem;
+    padding: .4rem;
     font-weight: 500;
     background-color: #12151b;
     color: #fff;
@@ -28,7 +30,21 @@
     border: none;
     display: flex;
     align-items: center;
+    transition: all 400ms;
+    position: relative;
 }
+
 .svg-plus{
-    margin-left: 6px;
+    height: 18px; 
+    width: 0;
+    top: 50%;
+    transition: all 400ms;
+
+}
+
+.add-btn:hover .svg-plus{
+    width: 18px;
+    height: 18px;
+    margin-left: 10px ;
+    transform: rotate(360deg);
 }
