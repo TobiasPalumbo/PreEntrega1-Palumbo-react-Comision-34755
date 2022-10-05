@@ -1,8 +1,9 @@
 .product-container{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: 360px 360px 1fr ;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     padding: 20px;
 }

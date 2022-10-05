@@ -1,0 +1,11 @@
+.counter-wrapper{
+    display: flex;
+}
+
+.btn{
+    cursor: pointer;
+}
+.svg-counter{
+    fill: #000;
+    width: 1.1rem
+}

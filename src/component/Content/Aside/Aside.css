@@ -1,0 +1,18 @@
+.category-wrapper{
+    min-height: 700px;
+}
+.categorys{
+    padding: 1rem ;
+    width: 200px;
+    min-height: 300px;
+    background-color: #fff;
+    border: 1px solid #efefee;
+}
+.list-items{
+    margin: .6rem 0;
+    cursor: pointer;
+}
+.cantidad-categoria{
+    color: rgb(106, 106, 106);
+    font-weight: 500;
+}

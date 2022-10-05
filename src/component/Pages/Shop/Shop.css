@@ -1,0 +1,13 @@
+.wrapper-shop{
+    margin: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 2rem;
+}
+.wrapper-shop-productos{
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+}

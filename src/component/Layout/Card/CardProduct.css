@@ -1,0 +1,148 @@
+.card-container{
+    background-color: #F5F6F8;
+}
+.card{
+    position: relative;
+    background-color: #fff;
+    width: 250px;
+    padding: 1rem;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 6px #00000036;
+}
+
+.img-product{
+    width: 100%;
+    user-select: none;
+}
+.title-product{
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.marca-product{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    color: #717171;
+    font-weight: 600;
+}
+
+.price-product{
+    font-weight: bold;
+    line-height: 2;
+}
+.add-btn{
+    padding: .4rem;
+    font-weight: 500;
+    background-color: #12151b;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    transition: all 400ms;
+    position: relative;
+}
+.cantidad-card{
+    color: #919397;
+    font-weight: 500;
+}
+.logo-card{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.svg-plus{
+    height: 18px; 
+    width: 0;
+    top: 50%;
+    transition: all 400ms;
+}
+
+.add-btn:hover .svg-plus{
+    width: 18px;
+    height: 18px;
+    margin-left: 10px ;
+    transform: rotate(360deg);
+}
+.img-container,
+.see-more-card,
+.title-product{
+    text-align: center;
+}
+.see-more-card{
+    background-color: #3b3c3f92;
+    opacity: 0; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    border-radius: 8px;
+    transition: all 400ms;
+    user-select: none;
+}
+.see-more-card a {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 200px;
+    height: 100%;
+    color: white;
+}
+.img-container:hover .see-more-card{
+    opacity: 1;
+    visibility: visible;
+}
+.heart-svg{
+    z-index: 99;
+}
+.heart-svg:hover{
+    cursor: pointer;
+    fill: red;
+}
+.card-6{
+    width: 100%;
+    height: 100%;
+}
+.card-6 .img-product{
+    width: 160px;
+}
+.cardContainer-6{
+    grid-column: 1/3;
+    grid-row: 3/4;
+    width: 100%;
+    height: 100%;
+}
+.card-7{
+    width: 100%;
+    height: 100%;
+}
+.card-7 .img-product{
+    width: 100%;
+}
+.card-7 button{
+    padding: .8rem 1.3rem;
+    font-size: 1.1rem;
+}
+.card-7 .title-product{
+    font-size: 2rem;
+}
+.card-7 .marca-product{
+    font-size: 1.5rem;
+}
+.card-7 .price-product{
+    font-size: 1.3rem;
+}
+.cardContainer-7{
+    grid-column: 3/5;
+    grid-row: 2/4;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,18 @@
+.box-sm{
+    width: 70px;
+    height: 70px;
+    color: #001845;
+    background-color: #F5F5F5;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(135, 135, 135);
+    user-select: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 400ms;
+}
+.box-sm:hover{
+    background-color: #8d8d8d;
+}
