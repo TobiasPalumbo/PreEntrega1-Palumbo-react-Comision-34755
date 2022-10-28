@@ -1,0 +1,20 @@
+.showCart-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px 30px 60px;
+    border-bottom: 2px solid rgba(213, 213, 213, 0.6) ;
+}
+.showCart-wrapper img{
+    width: 200px;
+}
+.description-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.remove-box{
+    margin-left: 80px;
+}
+
+

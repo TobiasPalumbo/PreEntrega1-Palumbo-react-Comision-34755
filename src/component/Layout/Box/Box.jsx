@@ -6,6 +6,8 @@ const Box = (props) => {
 		 <div className={`box-sm ${props.class}`} onClick={props.click}>
 			{props.input}
 		 </div>	
+
+		 
 		</>
 	);
 }

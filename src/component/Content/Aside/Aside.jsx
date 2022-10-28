@@ -1,26 +1,25 @@
 import React,{useEffect, useState} from 'react';
 import "./Aside.css"
 import { Link } from 'react-router-dom';
-import { fetchData } from '../../utils/functions';
+import { fetchData } from '../../../utils/functions';
+import { getProductos } from '../../../utils/firebase';
 const Aside = () => {
-  const [categoryArrays, setcategoryArrays] = useState([]);
   const [category, setcategory] = useState([]);
   useEffect(() => {
-    fetchData("../json/stock.json").then(data =>{
+    getProductos().then(data =>{
       let data2 = []
       let data3 = []
       data.forEach(el => {
-        if(!data3.includes(el.marca)){
+        if(!data3.includes(el[1].marca)){
           data2.push(el)
-          data3.push(el.marca)
-          console.log(data2)
+          data3.push(el[1].marca)
         }
       })
+      console.log(data2)
       const categorys = data2.map((cat,index) =>{
-           let a = <li key={index} className='list-items'><Link to={`/categorias/${cat.marca}`}>{cat.marca} <span className='cantidad-categoria'>({cat.cantidad})</span></Link></li>
+           let a = <li key={index} className='list-items'><Link to={`/categorias/${cat[1].marca}`}>{cat[1].marca} <span className='cantidad-categoria'>({cat[1].cantidad})</span></Link></li>
            return a
       })
-      
       setcategory(categorys)
     })
   }, []);

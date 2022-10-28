@@ -1,6 +1,6 @@
 import React from 'react';
-import ProductContainer from '../../ProductContainer';
-import TitleIncio from '../../TitleIncio';
+import ProductContainer from '../../Content/ProductContainer/ProductContainer';
+import TitleIncio from '../../Layout/TitleIncio/TitleIncio';
 const Inicio = () => {
     return (
       <>

@@ -1,0 +1,33 @@
+.form-wrapper{
+    max-width: 700px;
+    background-color: #fefeff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+}
+.form-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.form-contact input,textarea{
+    border: 1px solid black;
+    outline: none;
+    padding: .7rem 0.3rem;
+    border-radius: 5px;
+}
+.btn-submit{
+    background-color: #12151B;
+    text-transform: uppercase;
+    transition: all 400ms;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 1rem 0;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+}
+.btn-submit:hover{
+    transform: translateY(-3px);
+}

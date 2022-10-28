@@ -1,6 +1,7 @@
 import React from 'react';
-import HomeProducts from './HomeProducts';
-import "../styles/ProductoContainer.css"
+import HomeProducts from '../HomeProducts/HomeProducts';
+import "./ProductoContainer.css"
+
 const ProductContainer = () => {
     return (
     <>

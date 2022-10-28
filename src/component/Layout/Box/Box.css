@@ -10,9 +10,11 @@
     border: 1px solid rgb(135, 135, 135);
     user-select: none;
     font-weight: bold;
-    cursor: pointer;
     transition: all 400ms;
 }
-.box-sm:hover{
+.box-sm-hover{
+    cursor: pointer;
+}
+.box-sm-hover:hover{
     background-color: #8d8d8d;
 }

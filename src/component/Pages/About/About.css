@@ -1,0 +1,52 @@
+.img-figure{
+    width: 100%;
+    border-radius: 12px;
+}
+.figure{
+    width: 400px;
+    border-radius: 14px;
+}
+.wrapper-title-about{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+.wrapper-figures{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.myProyects{
+    text-align: center;
+    margin: 10px auto;
+}
+.img-logo-about{
+    width: 50px;
+}
+.skills-wrapper{
+    padding: 10px;
+    width: 270px;
+    background-color: rgb(26, 26, 26);
+    border-radius: 10px;
+    color: #fff;
+}
+.wrapper-logos-tecnologys{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(26, 26, 26);
+    border-radius: 10px;
+    width: 180px;
+    color: #fff;
+    padding: 10px 10px 4px 10px;
+}
+.wrapper-logos-skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}

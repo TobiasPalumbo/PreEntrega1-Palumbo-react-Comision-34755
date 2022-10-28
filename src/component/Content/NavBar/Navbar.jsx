@@ -2,12 +2,13 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import "./Navbar.css"
 import Cartwidget from '../../Icons/Cartwidget';
+import HeartSvg from '../../Icons/HeartSvg';
 const Navbar = () => {
   return (
   <header>
     <nav className='nav'>
       <div>
-        <img className='logo' src="./image/logo1.svg"  alt="" />
+        <img className='logo' src="https://firebasestorage.googleapis.com/v0/b/react-34755-tobiaspalumbo.appspot.com/o/imagenes%2Flogo1.svg?alt=media&token=c3925b60-da69-4147-a304-588845d117cb"  alt="" />
         </div>
       <ul className='nav-items'>
         <li>
@@ -29,10 +30,25 @@ const Navbar = () => {
           <Link to="/contact">Contact Us</Link>
         </li>
       </ul>
-      <Link 
-        to="/carrito">
-          <Cartwidget />
-      </Link>
+      <ul className='nav-icons'>
+        <li>
+          <Link 
+          to ="/favoritos">
+            <span>
+              <HeartSvg
+              clase = {"heart-nav img-logo"} />
+            </span>
+          </Link>
+        </li>
+        <li>
+          <Link 
+          to="/carrito">
+            <Cartwidget />
+          </Link>
+        </li>
+      </ul>
+      
+      
     </nav>
   </header>
   );

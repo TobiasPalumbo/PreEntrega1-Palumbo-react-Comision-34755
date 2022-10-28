@@ -4,7 +4,9 @@ const Plus = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="#fff"
+    transform=""
     width={18}
+    className = {props.class}
     viewBox="0 0 448 512"
     {...props}
   >

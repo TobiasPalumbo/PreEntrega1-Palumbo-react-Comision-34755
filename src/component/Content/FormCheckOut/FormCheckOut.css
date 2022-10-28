@@ -1,0 +1,49 @@
+.section-formCheck{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    margin: 10px 0;
+}
+.form-check{
+    width: 600px;
+    min-height: 500px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5) ;
+    border: px solid rgb(0, 0, 0);
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+.form-check form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-check form label{
+    font-weight: bold;
+
+}
+.form-check form input{
+    padding: .7rem .3rem;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    color: rgb(0, 0, 0);
+}
+::placeholder{
+    color: rgba(0, 0, 0, 0.507);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+.input-error{
+    border: 2px solid rgb(156, 79, 79) !important;
+    border-radius: 8px;
+}
+
+.warning-text{
+    color: rgb(156, 79, 79);
+}

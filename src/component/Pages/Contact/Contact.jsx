@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Form from '../../Content/FormHelp/FormHelp';
 const Contact = () => {
     return (
-        <div>
-            
+        <div className='main'>
+           <Form /> 
         </div>
     );
 }

@@ -12,7 +12,7 @@
     padding: 2rem;
 }
 .wrapper-title-info{
-    min-height: 100px;
+    min-height: 60px;
 }
 .wrapper-title-info h3{
     color: rgb(107, 107, 107);
@@ -24,11 +24,18 @@
     border-bottom: 1px solid rgb(60, 60, 60);
 }
 .wrapper-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
     border-bottom: 1px solid rgb(60, 60, 60);
     padding-bottom: 1.3rem;
 }
-.title-size{
+.title-size, .text-stock{
     line-height: 2;
+}
+.text-stock{
+    font-size: 1.3rem;
+    font-weight: 500;
 }
 .img-wrapper{
     max-width: 600px;
@@ -59,6 +66,10 @@
     box-shadow: 5px 5px 0 0 #000;
     color: #fff;
     transition: all 400ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 .size-box{
     transition: all 400ms;
@@ -70,4 +81,43 @@
 }
 .btn-cart:hover{
     background-color: rgb(122, 122, 122);
+}
+.addCart-svg{
+    width: 30px;
+    height: 219px;
+}
+.size-guide-text{
+    color: #2D0E32;
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+}
+.cross{
+    transform: rotate(45deg);
+}
+.wrapeper-rect{
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    border-bottom: 2px solid rgb(187, 187, 187);
+}
+.size-guide-text img{
+    transform: rotate(90deg);
+}
+.react-add{
+  border-bottom: 1px solid rgba(121, 121, 121, 0.61);
+  display: flex;
+  align-items: center;
+  width: 50%;
+  gap: 2px;
+  padding: 10px 0;
+}
+.talle-select{
+    background-color: #000;
+    color: #fff;
+}
+.out-stock{
+    font-weight: bold;
+    color: rgb(126, 0, 0);
 }

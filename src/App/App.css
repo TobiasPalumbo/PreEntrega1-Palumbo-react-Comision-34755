@@ -1,0 +1,14 @@
+.swal2-styled.swal2-confirm{
+    background-color: #252424 !important;
+  }
+.main{
+  min-height:  75vh;
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mt-10{
+  margin-top: 2rem;
+}

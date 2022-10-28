@@ -1,11 +1,12 @@
 import React,{ useState } from 'react';
 
-const Coulor = () => {
+const useCoulor = () => {
   const [isActive, setisActive] = useState(false);
   const handleClick = () => setisActive(current => !current)
-  return (
-    handleClick()
-  );
+  return ({
+    handleClick,
+    isActive
+  });
 }
 
-export default Coulor;
+export default useCoulor;

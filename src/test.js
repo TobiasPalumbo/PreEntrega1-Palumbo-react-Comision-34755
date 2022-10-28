@@ -2,7 +2,7 @@ let array = [
     {id:1, marca:"Nike"},
     {id:2, marca:"Adidas"},
     {id:3, marca:"Nike"},
-    {id:4, marca:"pene"},
+    {id:4, marca:"asdsa"},
     {id:5, marca:"Adidas"}
 ]
 

@@ -10,3 +10,6 @@ footer{
   border-bottom: 1px solid rgb(255, 255, 255);
   color: #fff ;
 }
+footer a{
+  color: #ffff;
+}

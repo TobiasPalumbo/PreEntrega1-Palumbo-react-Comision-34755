@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowSvg from "./Icons/Arrow"
+import ArrowSvg from "../../Icons/Arrow"
 const TitleIncio = () => {
   return (
     <>

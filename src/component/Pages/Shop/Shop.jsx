@@ -1,23 +1,25 @@
 import React, { useEffect,useState } from 'react';
-import { fetchData } from "../../utils/functions";
+import HomeProducts from "../../Content/HomeProducts/HomeProducts";
 import Card from "../../Layout/Card/Card"
 import Aside from '../../Content/Aside/Aside';
 import "./Shop.css";
+import { getProductos } from '../../../utils/firebase';
 const Shop = () => {
   const [productos, setproductos] = useState([]);
   useEffect(() => {
-     fetchData("./json/stock.json").then(data => {
+     getProductos().then(data => {
        const productoMap =  data.map(datos =>{
         let a = <Card 
-        key ={datos.id}
-        imagen = {datos.imagen}
-        logo = {datos.logo}
+        key ={datos[0]}
+        producto = {datos}
+        imagen = {datos[1].imagen}
+        logo = {datos[1].logo}
         class = {`cardShop-${datos.id}`}
-        modelo = {datos.modelo}
-        marca = {datos.marca}
-        precio = {datos.precio}
-        cantidad = {datos.cantidad}
-        idLink = {datos.id} />
+        modelo = {datos[1].modelo}
+        marca = {datos[1].marca}
+        precio = {datos[1].precio}
+        cantidad = {datos[1].cantidad}
+        idLink = {datos[0]} />
         return a
      })
     setproductos(productoMap)})
