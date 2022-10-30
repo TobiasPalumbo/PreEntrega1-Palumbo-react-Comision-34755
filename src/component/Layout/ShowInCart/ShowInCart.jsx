@@ -1,16 +1,22 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Box from "../Box/Box"
 import Counter from "../Counter/Counter"
-import "./ShowInCart.css"
+import "./ShowInCart.css";
 import Plus from '../../Icons/PlusSvg';
 import { AddToCartContext } from '../../../Context/addToCartProvider';
+import { TalleContex } from '../../../Context/TalleProvider';
 import useCounter from '../../../Hooks/Count';
-const ShowInCart = (props) => {
+
+
+
+const ShowInCart = (props) => 
+{
+  const {talle} = useContext(TalleContex);
   const {deleteToCart, cart, setCart, settotalDeProductos} = useContext(AddToCartContext);
   const {count, countAdd, countSubtract,setcount} = useCounter()
-  const setCountAdd = (id) => {
+  const setCountAdd = (id, cantidadMax) => {
     const cartAux = cart
-    countAdd()
+    countAdd(cantidadMax)
     let index = cart.findIndex(prod => prod.producto[0] === id)
     let newCount = count + 1
     cartAux[index].cant = newCount
@@ -46,7 +52,7 @@ const ShowInCart = (props) => {
       input = {props.talle}   />
       <div>
       <Counter 
-      countAdd = {() => setCountAdd(props.id)}
+      countAdd = {() => setCountAdd(props.id, talle.stock)}
       countSubtract = {() => setCountSubtract(props.id)}
       count = {count} />
       </div>

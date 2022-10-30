@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { doc, collection, addDoc, getFirestore, getDoc, getDocs, updateDoc, deleteDoc } from "firebase/firestore"
+import Swal from "sweetalert2";
 const firebaseConfig = {
   apiKey: process.env.API_KEY,
   authDomain: "react-34755-tobiaspalumbo.firebaseapp.com",
@@ -95,4 +96,19 @@ const  getOrdenDeCompras = async () => {
   return item
 }
 
-export {cargarBDD, getProductos, getProductById, updateProducto, deleteProducto, createProducto, crearOrdenDeCompra, getOrdenDeCompra, getOrdenDeCompras}
+const crearConsulta = async (nombre, email, mensaje ) => {
+  
+    const consulta = await addDoc(collection(db, "consulta"),{
+      nombre : nombre,
+      email : email, 
+      mensaje : mensaje
+    })
+    Swal.fire({
+      icon: 'success',
+      title: `Your message was sent!`,
+      text: "We will answer you soon"
+    })
+    return mensaje
+
+}
+export {cargarBDD, getProductos, getProductById, updateProducto, deleteProducto, createProducto, crearOrdenDeCompra, getOrdenDeCompra, getOrdenDeCompras, crearConsulta}

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import "./CardProduct.css"
 import HeartSvg from '../../Icons/HeartSvg';
 import useCoulor from '../../../Hooks/Coulor';
+import { TalleContex } from '../../../Context/TalleProvider';
 const Card = (props) => {
   const {isActive, handleClick}= useCoulor()
+  const {setTalle} = useContext(TalleContex);
   return (
     <div className={`card-container ${props.class}`} >
         <div className={`card ${props.classCard}`}>
@@ -19,7 +21,7 @@ const Card = (props) => {
               className='img-product' 
               src={props.imagen} 
               alt="" />
-              <div className='see-more-card'>
+              <div className='see-more-card' onClick={() => setTalle({})}>
                 <Link to={`/producto/${props.idLink}`}><p>See more</p></Link>
               </div>
           </div>

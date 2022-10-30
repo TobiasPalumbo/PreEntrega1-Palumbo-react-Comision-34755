@@ -5,11 +5,13 @@ import { crearOrdenDeCompra, getOrdenDeCompra, getProductById, updateProducto } 
 import "./FormCheckOut.css"
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import { TalleContex } from '../../../Context/TalleProvider';
 
 
 const FormCheckOut = () => { 
+  const {talle, setTalle} = useContext(TalleContex)
+
   const navigate = useNavigate()
-  const [goToHome, setgoToHome] = useState(false);
   let initialForm = {
     name: "",
     lastName: "",
@@ -35,7 +37,7 @@ const FormCheckOut = () => {
     if(!form.email.trim()){
       error.email = "Email is required!" 
     }else if(!regexName.test(form.name.trim())){
-      error.email = "Emial is i"
+      error.email = "Emial is "
     }
     if(!form.dni.trim()){
       error.dni = "ID is required!" 
@@ -52,6 +54,7 @@ const FormCheckOut = () => {
   const {total, emptyCart, cart} = useContext(AddToCartContext);
 
   const datosForm = React.useRef()
+
   const { 
     form,
     errors,
@@ -65,8 +68,9 @@ const FormCheckOut = () => {
     e.preventDefault()
     let cartAux = []
     const cartAux2 = []
-    let contador = 0
-    if(Object.keys(errors).length === 0){
+    validateForm(initialForm)
+    if(form.name !== "" ){
+      if(Object.keys(errors).length === 0){
         const data = new FormData(datosForm.current)
         const finalData = Object.fromEntries(data)
         const {name, lastName, email, dni, addres} = finalData
@@ -91,7 +95,7 @@ const FormCheckOut = () => {
                  getProductById(cartAux[i])
                  .then(prod =>{
                   cart.map(productos => {
-                      cartAux2.push(prod)
+                  cartAux2.push(prod)
                   let indexTalle = prod[1].talle.findIndex(el => el.size === productos.talle.talle)
                   console.log("talles index:", indexTalle)
                   if(prod[1].talle[indexTalle].size === productos.talle.talle && prod[0] === productos.producto[0]){
@@ -112,8 +116,16 @@ const FormCheckOut = () => {
             icon: 'success',
             title: `Your purchase has been completed ID:${item.id}`,
            })
-         }).then(emptyCart(cart)).then(navigate("/"))
+           navigate("/")
+         }).then(emptyCart(cart)).then(setTalle({}))
         }
+    }else if(form.name === "" || form.lastName === "" || form.dni === "" || form.addres === "" ){
+      Swal.fire({
+        icon: "error",
+        title: "Invalid data input, fill the inputs"
+      })
+    }
+   
   }
   return (
     <section className='section-formCheck'>

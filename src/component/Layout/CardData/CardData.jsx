@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Talles from '../../Content/Talles/Talles';
 import Counter from '../Counter/Counter';
 import "./CardData.css";
@@ -12,9 +12,17 @@ import Rectangulo from '../Rectangulo/Rectangulo';
 
 const CardData = (props) => {
   const {handleClick, isActive} = useCoulor()
-  const {talle, talleSelect} = useContext(TalleContex);
-  console.log(talle)
-  const {count, countAdd, countSubtract} = useCounter()
+  const {talle, talleSelect, setTalle} = useContext(TalleContex);
+
+  const {count, countAdd, countSubtract, setcount} = useCounter()
+  
+  useEffect(() => {
+    if(talle.stock <= 0){
+      setcount(0)
+    }else{
+      setcount(1)
+    }
+  }, [talle]);
   return (
     <>
      <section>
@@ -71,9 +79,8 @@ const CardData = (props) => {
           </div>
           <div className = "wrapper-btn">
             <Counter
-            cantidadMax = {talle.stock === undefined ? " ":talle.stock} 
             count = {count}
-            countAdd = {countAdd}
+            countAdd = {() => countAdd(talle.stock)}
             countSubtract = {countSubtract} />
             <Button 
             class = 'btn-cart' 

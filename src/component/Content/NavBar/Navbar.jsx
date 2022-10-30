@@ -36,7 +36,8 @@ const Navbar = () => {
           to ="/favoritos">
             <span>
               <HeartSvg
-              clase = {"heart-nav img-logo"} />
+              clase = {"heart-nav img-logo"}
+              click = {() => 0} />
             </span>
           </Link>
         </li>

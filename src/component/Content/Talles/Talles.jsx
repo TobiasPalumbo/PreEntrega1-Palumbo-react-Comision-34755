@@ -9,11 +9,13 @@ const Talles = () => {
   const {cart} = useContext(AddToCartContext); 
   const {talleSelect, talle, setTalle} = useContext(TalleContex)
   const {id} = useParams()
+
+  // setTalle({})
   useEffect(() => {
     getProductById(id).then(productoData =>{
       const tallesMap = productoData[1].talle.map(talles => {
          const {size, stock} = talles;
-        const mapBox = <Box 
+         const mapBox = <Box 
          key = {size} 
          input = {size} 
          click = {()=> setTalle({id:productoData[0], talle:size, stock:stock})} 

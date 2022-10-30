@@ -12,7 +12,7 @@ const Product = () => {
     .then(produc =>{
       setproducto(produc) 
       })
-  }, [id]); 
+  }, [id]);
   if(producto.length!==0){
         return(
       <>

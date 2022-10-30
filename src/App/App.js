@@ -17,6 +17,7 @@ import { TalleProvider } from '../Context/TalleProvider';
 import Favoritos from '../Component/Pages/Favoritos/Favoritos';
 import Checkout from '../Component/Pages/Checkout/Checkout';
 
+
 function App() {
   return (
     <>
@@ -26,19 +27,19 @@ function App() {
         <TalleProvider>
         <BrowserRouter>
           <Navbar />
-          <Routes>
-            <Route path = '/' element = {<Inicio />} />
-            <Route path = '/sale' element = {<Sale />} />
-            <Route path = '/shop' element = {<Shop />}  />
-            <Route path = '/categorias/:marca' element = {<Categoria />} />
-            <Route path = '/producto/:id' element = {<Product />} />
-            <Route path = '/about' element = {<About />} />
-            <Route path = '/contact' element = {<Contact />} />
-            <Route path = "/favoritos" element = {<Favoritos />} />
-            <Route path = '/carrito' element = {<Carrito />} />
-            <Route path = '/checkout' element = {<Checkout />} />
-            <Route path = "*" element = {<NotFound />} />
-          </Routes>
+            <Routes>
+              <Route path = '/' element = {<Inicio />} />
+              <Route path = '/sale' element = {<Sale />} />
+              <Route path = '/shop' element = {<Shop />}  />
+              <Route path = '/categorias/:marca' element = {<Categoria />} />
+              <Route path = '/producto/:id' element = {<Product />} />
+              <Route path = '/about' element = {<About />} />
+              <Route path = '/contact' element = {<Contact />} />
+              <Route path = "/favoritos" element = {<Favoritos />} />
+              <Route path = '/carrito' element = {<Carrito />} />
+              <Route path = '/checkout' element = {<Checkout />} />
+              <Route path = "*" element = {<NotFound />} />
+            </Routes>
           <Footer />
         </BrowserRouter>
         </TalleProvider>
