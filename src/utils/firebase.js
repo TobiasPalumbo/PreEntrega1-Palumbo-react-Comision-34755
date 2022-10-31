@@ -97,6 +97,7 @@ const  getOrdenDeCompras = async () => {
 }
 
 const crearConsulta = async (nombre, email, mensaje ) => {
+
   
     const consulta = await addDoc(collection(db, "consulta"),{
       nombre : nombre,

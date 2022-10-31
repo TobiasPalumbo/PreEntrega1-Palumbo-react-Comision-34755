@@ -16,6 +16,7 @@ import { CounterProvider } from '../Context/CounterProvider';
 import { TalleProvider } from '../Context/TalleProvider';
 import Favoritos from '../Component/Pages/Favoritos/Favoritos';
 import Checkout from '../Component/Pages/Checkout/Checkout';
+import { FavoriteProvider } from '../Context/favoriteProvider';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
     <>
        <div className="App">
         <CounterProvider>
+        <FavoriteProvider>
         <AddToCartProvider>
         <TalleProvider>
         <BrowserRouter>
@@ -44,6 +46,7 @@ function App() {
         </BrowserRouter>
         </TalleProvider>
         </AddToCartProvider>
+        </FavoriteProvider>
         </CounterProvider>
         </div>
     </>

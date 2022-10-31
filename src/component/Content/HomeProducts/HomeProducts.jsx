@@ -20,7 +20,7 @@ const HomeProducts = () => {
       modelo = { producto[1].modelo }
       precio = { producto[1].precio }
       cantidad = { producto[1].cantidad }
-      producto = { producto[1] } />
+      producto = { producto } />
       return a  
       
   }))

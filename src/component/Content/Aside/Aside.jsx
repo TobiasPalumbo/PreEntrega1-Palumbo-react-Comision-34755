@@ -1,7 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import "./Aside.css"
 import { Link } from 'react-router-dom';
-import { fetchData } from '../../../utils/functions';
 import { getProductos } from '../../../utils/firebase';
 const Aside = () => {
   const [category, setcategory] = useState([]);

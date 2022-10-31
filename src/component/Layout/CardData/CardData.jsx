@@ -12,10 +12,9 @@ import Rectangulo from '../Rectangulo/Rectangulo';
 
 const CardData = (props) => {
   const {handleClick, isActive} = useCoulor()
-  const {talle, talleSelect, setTalle} = useContext(TalleContex);
+  const {talle} = useContext(TalleContex);
 
   const {count, countAdd, countSubtract, setcount} = useCounter()
-  
   useEffect(() => {
     if(talle.stock <= 0){
       setcount(0)

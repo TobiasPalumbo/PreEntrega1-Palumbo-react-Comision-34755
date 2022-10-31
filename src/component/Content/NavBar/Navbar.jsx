@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import "./Navbar.css"
 import Cartwidget from '../../Icons/Cartwidget';
 import HeartSvg from '../../Icons/HeartSvg';
+import { FavoriteCotext } from '../../../Context/favoriteProvider';
 const Navbar = () => {
+  const {favorites} = useContext(FavoriteCotext);
   return (
   <header>
     <nav className='nav'>
@@ -37,7 +39,8 @@ const Navbar = () => {
             <span>
               <HeartSvg
               clase = {"heart-nav img-logo"}
-              click = {() => 0} />
+              click = {() => null} />
+              <span>{favorites.length}</span>
             </span>
           </Link>
         </li>
@@ -48,8 +51,6 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      
-      
     </nav>
   </header>
   );

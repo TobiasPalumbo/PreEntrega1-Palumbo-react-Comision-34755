@@ -1,5 +1,4 @@
 import React from 'react';
-import Swal from 'sweetalert2';
 import useForm from '../../../Hooks/useForm';
 import { crearConsulta } from '../../../utils/firebase';
 import "./Form.css"
@@ -44,7 +43,7 @@ const Form = () => {
   const submiteHelp = (e) =>{
     e.preventDefault()
     validateForm(initialForm)
-    if(initialForm.nombre.trim() || initialForm.email.trim() || initialForm.mensaje.trim()){
+    if(form.nombre !== "" ){
       if(Object.keys(errors).length === 0){
       const data = new FormData(datosFormulario.current)
       const finalData = Object.fromEntries(data)

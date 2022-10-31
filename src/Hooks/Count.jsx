@@ -1,11 +1,9 @@
 import React,{ useState } from 'react';
-import { useContext } from 'react';
-import { TalleContex } from '../Context/TalleProvider';
 
 
 
  const useCounter = () =>{
-  // const {talle} = useContext(TalleContex);  
+
 
   const [count, setcount] = useState(1);
   const countAdd = (cantidadMax) => {

@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
-import Talles from '../Talles/Talles';
 import CardData from '../../Layout/CardData/CardData';
 import { getProductById } from '../../../utils/firebase';
 const Product = () => {

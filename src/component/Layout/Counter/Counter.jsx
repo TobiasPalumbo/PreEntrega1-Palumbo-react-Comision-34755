@@ -3,7 +3,6 @@ import Plus from '../../Icons/PlusSvg';
 import SubtractSvg from '../../Icons/SubtractSvg';
 import "./Counter.css"
 import Box from '../Box/Box';
-import { TalleContex } from '../../../Context/TalleProvider';
 
 const Counter = ({count, countAdd, countSubtract}) => {
  

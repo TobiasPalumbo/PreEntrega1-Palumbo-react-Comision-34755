@@ -4,17 +4,27 @@ import "./CardProduct.css"
 import HeartSvg from '../../Icons/HeartSvg';
 import useCoulor from '../../../Hooks/Coulor';
 import { TalleContex } from '../../../Context/TalleProvider';
+import { FavoriteCotext } from '../../../Context/favoriteProvider';
 const Card = (props) => {
   const {isActive, handleClick}= useCoulor()
   const {setTalle} = useContext(TalleContex);
+  const {addTofavorites} = useContext(FavoriteCotext)
+  const {favorites} = useContext(FavoriteCotext)
+  const favAux = favorites
+
+  const handleClickHeart = (producto) =>{
+    handleClick()
+    addTofavorites(producto)
+  }
+
   return (
     <div className={`card-container ${props.class}`} >
         <div className={`card ${props.classCard}`}>
           <HeartSvg
           width = "30px"
           producto = {props.producto}
-          click = {() => handleClick()}
-          clase = {`heart-svg ${isActive ? "bg-active" : ""}`}
+          click = {() => handleClickHeart(props.producto)}
+          clase = {`heart-svg ${isActive || favAux.findIndex(prod => prod[0] === props.producto[0]) != -1   ? "bg-active" : ""}`}
           />
           <div className='img-container'>
             <img  

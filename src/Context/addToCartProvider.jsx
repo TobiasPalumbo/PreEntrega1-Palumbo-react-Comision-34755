@@ -1,6 +1,5 @@
-import React, { useState, createContext, useContext } from 'react';
+import React, { useState, createContext } from 'react';
 import Swal from "sweetalert2"
-import { TalleContex } from './TalleProvider';
 
 const AddToCartContext = createContext()
 const AddToCartProvider = (props) => {
@@ -38,14 +37,12 @@ const AddToCartProvider = (props) => {
         icon: 'error'
       })
     }
-
   }
 
   const deleteToCart = (product) => {
     console.log(product.talle)
     const cartAux = cart
     let index = cartAux.findIndex(prod=>prod.talle === product.talle)
-    console.log(index)
     cartAux.splice(index,1)
     let cartTotal = cart.reduce((acc, prod) => acc + prod.cant, 0)
     settotalDeProductos(cartTotal)

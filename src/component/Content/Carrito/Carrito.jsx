@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AddToCartContext } from '../../../Context/addToCartProvider';
-import { updateProducto } from '../../../utils/firebase';
 import ShowInCart from '../../Layout/ShowInCart/ShowInCart';
 import FooterCart from '../FooterCart/FooterCart';
 import "./Carrito.css"
