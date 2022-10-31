@@ -6,14 +6,20 @@ import useCoulor from '../../../Hooks/Coulor';
 import { TalleContex } from '../../../Context/TalleProvider';
 import { FavoriteCotext } from '../../../Context/favoriteProvider';
 const Card = (props) => {
-  const {isActive, handleClick}= useCoulor()
+  const {isActive, setisActive}= useCoulor()
   const {setTalle} = useContext(TalleContex);
   const {addTofavorites} = useContext(FavoriteCotext)
   const {favorites} = useContext(FavoriteCotext)
   const favAux = favorites
 
   const handleClickHeart = (producto) =>{
-    handleClick()
+    const indFav = favAux.findIndex(prod => prod[0] === props.producto[0])
+    if(indFav === -1){
+      setisActive(true)
+    }else{
+      setisActive(false)
+    }
+   
     addTofavorites(producto)
   }
 
