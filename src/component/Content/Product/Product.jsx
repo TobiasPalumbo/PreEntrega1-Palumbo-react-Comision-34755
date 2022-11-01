@@ -12,7 +12,7 @@ const Product = () => {
       setproducto(produc) 
       })
   }, [id]);
-  if(producto.length!==0){
+  if(producto.length !== 0){
         return(
       <>
       <CardData

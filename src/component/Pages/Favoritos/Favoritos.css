@@ -1,5 +1,5 @@
 .favorite-wrapper{
-    width: 800px;
+    max-width: 760px;
     min-height: 500px;
     background: #ffff;
     margin: 30px auto;
@@ -7,7 +7,7 @@
     box-shadow: 0 0 8px rgba(90, 90, 90, 0.438);
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 15px;
     border-radius: 8px;
 }
 .fav-tittle{
@@ -25,7 +25,37 @@
     border-bottom: 2px solid;
 }
 .favImg-card{
+    /* cursor: pointer; */
     width: 170px;
+}
+.see-more-cardfav{
+    background-color: #3b3c3f92;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    border-radius: 8px;
+    transition: all 400ms;
+    -webkit-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+.see-more-cardfav a {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 200px;
+    height: 100%;
+    color: white;
+}
+
+.favImg-container:hover .see-more-cardfav{
+    opacity: 1                                                  ;
+    visibility: visible;
 }
 .fav-card{
     position: relative;
@@ -48,7 +78,11 @@
 }
 .corazon-fav{
     fill: #f00;
+    z-index: 4;
     width: 30px;
     position: absolute;
     left: 10px;
+}
+.corazon-fav:hover{
+    fill: #000;
 }
