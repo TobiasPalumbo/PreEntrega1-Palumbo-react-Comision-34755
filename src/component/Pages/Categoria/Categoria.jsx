@@ -23,7 +23,8 @@ const Categoria = () => {
         marca = {productos[1].marca}
         precio = {productos[1].precio}
         cantidad = {productos[1].cantidad}
-        idLink = {productos[0]} />
+        idLink = {productos[0]}
+        producto = {productos} />
         return a
       })
       setcategoria(productoMap)
